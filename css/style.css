@@ -33,7 +33,9 @@ body{
 .loader span{
     position: absolute;
     transform-origin: 150px;
-    transform: translateX(-150px) rotate(calc(var(--i)   * 30deg));
+    rotate: calc(var(--i) * 30deg);
+    translate: -150px;
+    /* transform: translateX(-150px) rotate(calc(var(--i)   * 30deg)); */
     filter: drop-shadow(0 0 5px #3cc2ff ) drop-shadow(0 0 15px #3cc2ff) drop-shadow(0 0 30px #3cc2ff)
 }
 
@@ -46,13 +48,19 @@ body{
 
 @keyframes rotate-stars {
    0%{
-    transform: rotate(0deg) scale(0);
+    rotate: 0deg;
+    scale: 0;
+    /* transform: rotate(0deg) scale(0); */
    }
    50%{
-    transform: rotate(180deg) scale(3);
+    rotate: 180deg;
+    scale: 3;
+    /* transform: rotate(180deg) scale(3); */
    }
    100%{
-    transform: rotate(360deg) scale(0);
+    rotate: 360deg;
+    scale: 0;
+    /* transform: rotate(360deg) scale(0); */
    }
 }
 
